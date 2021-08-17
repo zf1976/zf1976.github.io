@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker 安装配置Spring cloud 微服务开箱即用</title>
+    <url>/2021/06/03/Docker%20%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AESpring%20cloud%20%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="Nacos"><a href="#Nacos" class="headerlink" title="Nacos"></a>Nacos</h3><ul>
+<li>拉下镜像<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull nacos/nacos-server</span><br></pre></td></tr></table></figure></li>
+<li>启动<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8848:8848 --env MODE=standalone --name nacos --restart=always nacos/nacos-server</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Sentinel"><a href="#Sentinel" class="headerlink" title="Sentinel"></a>Sentinel</h2><ul>
+<li>拉下镜像<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull bladex/sentinel-dashboard</span><br></pre></td></tr></table></figure></li>
+<li>启动<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run --name sentinel --restart=always -d -p 8858:8858 -d bladex/sentinel-dashboard</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>配置</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CRUD一些常用工具</title>
     <url>/2021/08/02/CRUD%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<ol>
@@ -51,25 +70,6 @@
       </categories>
       <tags>
         <tag>CRUD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker 安装配置Spring cloud 微服务开箱即用</title>
-    <url>/2021/06/03/Docker%20%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AESpring%20cloud%20%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="Nacos"><a href="#Nacos" class="headerlink" title="Nacos"></a>Nacos</h3><ul>
-<li>拉下镜像<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull nacos/nacos-server</span><br></pre></td></tr></table></figure></li>
-<li>启动<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8848:8848 --env MODE=standalone --name nacos --restart=always nacos/nacos-server</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="Sentinel"><a href="#Sentinel" class="headerlink" title="Sentinel"></a>Sentinel</h2><ul>
-<li>拉下镜像<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull bladex/sentinel-dashboard</span><br></pre></td></tr></table></figure></li>
-<li>启动<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run --name sentinel --restart=always -d -p 8858:8858 -d bladex/sentinel-dashboard</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>配置</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -354,15 +354,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven阿里云镜像</title>
-    <url>/2020/03/26/Maven%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/</url>
-    <content><![CDATA[<h4 id="重写settings-xml"><a href="#重写settings-xml" class="headerlink" title="重写settings.xml"></a>重写settings.xml</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0</span></span></span><br><span class="line"><span class="string"><span class="tag">                          https://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>配置</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Linux后台运行hexo</title>
     <url>/2021/08/02/Linux%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8Chexo/</url>
     <content><![CDATA[<blockquote>
@@ -389,6 +380,15 @@
       <tags>
         <tag>Linux</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Maven阿里云镜像</title>
+    <url>/2020/03/26/Maven%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/</url>
+    <content><![CDATA[<h4 id="重写settings-xml"><a href="#重写settings-xml" class="headerlink" title="重写settings.xml"></a>重写settings.xml</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0</span></span></span><br><span class="line"><span class="string"><span class="tag">                          https://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span>          </span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span>  </span><br><span class="line">      <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>配置</category>
+      </categories>
   </entry>
   <entry>
     <title>MySQL修改密码</title>
